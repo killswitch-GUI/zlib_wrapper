@@ -1,3 +1,8 @@
-# zlib_wrapper
-Wrapper around zlib with custom header crc32. Built to learn pip packaging 
+zlib_wrapper
+--------
+
+To use (with caution), simply do::
+
+    >>> import funniest
+    >>> print funniest.joke()
 
