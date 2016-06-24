@@ -53,22 +53,26 @@ class decompress(object):
         """
         pass
 
-    def dec_data(self, data):
+    def dec_data(self, data, cheader=True):
         '''
         Takes:
         Custom / standard header data
         data = comp data with zlib header
+        BOOL cheader = passing custom crc32 header
 
         returns:
         dict with crc32 cheack and dec data string
         ex. {"crc32" : true, "dec_data" : "-SNIP-"}
         '''
-        comp_crc32 = struct.unpack("!I", data[:self.CRC_HSIZE])[0]
-        dec_data = zlib.decompress(data[self.CRC_HSIZE:])
-        dec_crc32 = zlib.crc32(dec_data) & 0xFFFFFFFF
-        if comp_crc32 == dec_crc32:
-            crc32 = True
+        if cheader:
+            comp_crc32 = struct.unpack("!I", data[:self.CRC_HSIZE])[0]
+            dec_data = zlib.decompress(data[self.CRC_HSIZE:])
+            dec_crc32 = zlib.crc32(dec_data) & 0xFFFFFFFF
+            if comp_crc32 == dec_crc32:
+                crc32 = True
+            else:
+                crc32 = False
+            return { "header_crc32" : comp_crc32, "dec_crc32" : dec_crc32, "crc32_check" : crc32, "data" : dec_data }
         else:
-            crc32 = False
-        return { "header_crc32" : comp_crc32, "dec_crc32" : dec_crc32, "crc32_check" : crc32, "data" : dec_data }
-
+            dec_data = zlib.decompress(data)
+            return dec_data
