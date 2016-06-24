@@ -4,8 +4,8 @@ from zlib_wrapper import compress
 from zlib_wrapper import decompress
 
 def test_all():
-	a.compress.compress()
-	b.decompress.decompress()
+	a = compress.compress()
+	b = decompress.decompress()
 	data = "Killswitc-gui is a sick handle"
 	start_crc32 = a.crc32_data(data)
 	print "-Starting str: ", data
