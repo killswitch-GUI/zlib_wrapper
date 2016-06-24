@@ -1,8 +1,8 @@
 zlib_wrapper
 --------
 
-To use (with caution), simply do::
+To use , simply do::
 
-    >>> import funniest
-    >>> print funniest.joke()
+    >>> import zlib_wrapper
+    >>> com = zlib_wrapper.compress()
 
