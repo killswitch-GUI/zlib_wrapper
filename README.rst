@@ -4,6 +4,8 @@
 zlib_wrapper
 --------
 
+A very small library for building crc32 header on top of zlib (in 2.7 standard library). Was built to learn pip packaging, and implement compression before encryption for EmPyre https://github.com/adaptivethreat/EmPyre.
+
 To get up and running:
 
     >>> from zlib_wrapper import compress
@@ -11,8 +13,8 @@ To get up and running:
     
 zlib_wrapper compression step-by-step
 --------
-    
-To get you crc32 for suplied data or string:
+
+To get you crc32 for supplied data or string:
 
     >>> data = "Always check your data"
     >>> c = compress.compress()
@@ -25,3 +27,11 @@ To get your compressed for suplied data or string:
 To build your custom zlib header with crc32:
     
     >>> final_comp_data = a.build_header(comp_data, start_crc32)
+
+zlib_wrapper decompression step-by-step
+--------
+
+To decompress your compressed data:
+
+    >>> dec_data = b.dec_data(final_comp_data)
+    
