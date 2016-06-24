@@ -1,7 +1,7 @@
 
 from setuptools import setup
 
-setup(name='email_format',
+setup(name='zlib_wrapper',
       version='1.0',
       description='Wrapper around zlib with custom header crc32.',
       url='http://github.com/killswitch-GUI/zlib_format',
