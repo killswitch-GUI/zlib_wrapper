@@ -4,8 +4,8 @@
 zlib_wrapper
 --------
 
-To use , simply do::
+To get up and running:
 
-    >>> import zlib_wrapper
-    >>> com = zlib_wrapper.compress()
+    >>> from zlib_wrapper import compress
+    >>> from zlib_wrapper import decompress
 
