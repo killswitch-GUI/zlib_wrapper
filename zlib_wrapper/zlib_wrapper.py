@@ -48,10 +48,10 @@ class compress(object):
 	COMP_RATIO = 9
 
 	def __init__(self, verbose=False):
-    	"""
-    	Populates init.
-    	"""
-    	pass
+    		"""
+    		Populates init.
+    		"""
+    		pass
 
 	def comp_data(data, cvalue=self.COMP_RATIO):
 		'''
