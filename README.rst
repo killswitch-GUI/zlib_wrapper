@@ -5,7 +5,6 @@ zlib_wrapper
 --------
 
 To get up and running:
-
     >>> from zlib_wrapper import compress
     >>> from zlib_wrapper import decompress
 
