@@ -1,9 +1,11 @@
 import os
 import sys
-from zlib_wrapper import zlib_wrapper
+from zlib_wrapper import compress
+from zlib_wrapper import decompress
 
 def test_all():
-	a.zlib_wrapper.compress()
+	a.compress.compress()
+	b.decompress.decompress()
 	data = "Killswitc-gui is a sick handle"
 	start_crc32 = a.crc32_data(data)
 	print "-Starting str: ", data
@@ -14,7 +16,7 @@ def test_all():
 	final_comp_data = a.build_header(comp_data, start_crc32)
 	print "-Compression data with CRC header built size: " + str(sys.getsizeof(final_comp_data))
 	print "-Starting decompress of data!"
-	dec_data = a.dec_data(final_comp_data)
+	dec_data = b.dec_data(final_comp_data)
 	print "-Final return data dict: ", dec_data
 	print dec_data['crc32_check']
 

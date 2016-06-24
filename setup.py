@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(name='zlib_wrapper',
-      version='1.0',
+      version='0.1.1',
       description='Wrapper around zlib with custom header crc32.',
       url='http://github.com/killswitch-GUI/zlib_format',
       author='Alexander Rymdeko-Harvey',
@@ -10,6 +10,6 @@ setup(name='zlib_wrapper',
       license='GNU 3.0',
       packages=['zlib_wrapper'],
       install_requires=[
-          'zlib',
+          '',
       ],
       zip_safe=False)
