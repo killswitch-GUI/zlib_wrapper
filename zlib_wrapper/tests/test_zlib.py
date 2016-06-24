@@ -22,8 +22,8 @@ def test_all():
 
 	assert start_crc32 == 2727504892
 	assert sys.getsizeof(data) == 67
-	assert comp_data 
-	assert sys.getsizeof(final_comp_data) == 75
+	assert sys.getsizeof(comp_data) == 75
+	assert sys.getsizeof(final_comp_data) == 79
 	assert dec_data['crc32_check'] == True
 	assert dec_data['data'] == data
 	assert dec_data['header_crc32'] == start_crc32
