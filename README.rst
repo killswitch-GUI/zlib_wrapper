@@ -36,5 +36,6 @@ Decompression goes through crc32 checks and returns a custom dictonary object.
 To decompress your compressed data:
 
     >>> dec_data = b.dec_data(final_comp_data)
-        {'data': 'Killswitc-gui is a sick handle', 'header_crc32': 2727504892, 'crc32_check': True, 'dec_crc32': 2727504892}
+    
+    {'data': 'Killswitc-gui is a sick handle', 'header_crc32': 2727504892, 'crc32_check': True, 'dec_crc32': 2727504892}
     
