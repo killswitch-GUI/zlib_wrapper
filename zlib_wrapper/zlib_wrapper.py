@@ -39,7 +39,11 @@ import sys
 # bits 0 to 3  CM     Compression method
 # bits 4 to 7  CINFO  Compression info
 
-class compress:
+class compress(object):
+	 '''
+  	Base clase for init of the package. This will handle
+  	the initial object creation for conducting basic functions.
+	 '''
 
 	CRC_HSIZE = 4
 	COMP_RATIO = 9
