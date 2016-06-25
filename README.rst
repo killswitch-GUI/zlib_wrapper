@@ -1,7 +1,7 @@
 .. image:: https://travis-ci.org/killswitch-GUI/zlib_wrapper.svg?branch=master
     :target: https://travis-ci.org/killswitch-GUI/zlib_wrapper
 
-.. image:: https://coveralls.io/repos/github/killswitch-GUI/zlib_wrapper/badge.svg?branch=masterr
+.. image:: https://coveralls.io/repos/github/killswitch-GUI/zlib_wrapper/badge.svg?branch=master
 
 zlib_wrapper
 --------
