@@ -35,8 +35,13 @@ zlib_wrapper decompression step-by-step
 
 Decompression goes through crc32 checks and returns a custom dictonary object. 
 
-To decompress your compressed data:
+To decompress your compressed data with the crc32 header:
 
     >>> dec_data = b.dec_data(final_comp_data)
     {'data': 'Killswitc-gui is a sick handle', 'header_crc32': 2727504892, 'crc32_check': True, 'dec_crc32': 2727504892}
+    
+To decompress your compressed data without the crc32 header:
+
+    >>> dec_data = b.dec_data(final_comp_data, cheader=False)
+        "Killswitc-gui is a sick handle"
     
