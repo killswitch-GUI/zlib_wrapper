@@ -3,6 +3,9 @@
 
 .. image:: https://coveralls.io/repos/github/killswitch-GUI/zlib_wrapper/badge.svg?branch=master
 
+.. image:: https://img.shields.io/pypi/v/lterm.svg
+    :target: https://pypi.python.org/pypi/lterm
+
 zlib_wrapper
 --------
 
